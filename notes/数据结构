@@ -1,0 +1,20 @@
+1. observation.state
+   - shape: (6,)
+   - 含义：SO101 当前六个关节的位置
+   - 顺序：
+     shoulder_pan（底座/肩部左右旋转）
+     shoulder_lift（肩部抬升）
+     elbow_flex（肘部弯曲）
+     wrist_flex（手腕俯仰）
+     wrist_roll（手腕旋转）
+     gripper（夹爪开合） 
+
+2. action
+   - shape: (6,)
+   - 含义：SO101 六个关节的目标位置指令
+   - 不是关节速度
+   - 顺序与 observation.state 一致
+
+3. 采样频率
+   - 30 Hz
+   - 每帧间隔约 0.0333 s
